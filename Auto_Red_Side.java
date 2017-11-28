@@ -31,6 +31,7 @@ public class Auto_Red_Side {
             // Robot is waiting to start
             waitForStart();
 //Start Autonomous
+            //servo
 
             // Drive foward
             robot.motorBackRight.setPower(.5);

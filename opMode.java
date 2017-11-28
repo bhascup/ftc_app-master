@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.util.Range;
 
 
-@TeleOp(name="Tele op 2017-18", group="NHRHS Robotics")
+@TeleOp(name="Tele op 2017-18 1 person", group="NHRHS Robotics")
 
 public class opMode extends LinearOpMode {
 
@@ -66,10 +66,10 @@ public class opMode extends LinearOpMode {
 //Start code for moving
 
             // Drive train
-            robot.motorBackRight.setPower(-gamepad1.right_stick_y);
-            robot.motorFrontRight.setPower(-gamepad1.right_stick_y);
-            robot.motorBackLeft.setPower(gamepad1.left_stick_y);
-            robot.motorFrontLeft.setPower(gamepad1.left_stick_y);
+            robot.motorBackRight.setPower(-gamepad1.right_stick_y/2);
+            robot.motorFrontRight.setPower(-gamepad1.right_stick_y/2);
+            robot.motorBackLeft.setPower(gamepad1.left_stick_y/2);
+            robot.motorFrontLeft.setPower(gamepad1.left_stick_y/2);
 
             //v drawer slide
             if (gamepad1.x)

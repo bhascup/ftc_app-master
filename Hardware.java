@@ -6,11 +6,13 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
+import com.qualcomm.robotcore.hardware.ColorSensor;
 
 /**
  * This is NOT an opmode.
  *
  * This class can be used to define all the specific hardware for a single robot.
+ *
  *
  * This hardware class assumes the following device names have been configured on the robot:
  * Note:  All names are case sensitive and some have single spaces between words.
@@ -25,11 +27,14 @@ public class Hardware
     public DcMotor  motorFrontRight  = null;
     public DcMotor  motorBackRight   = null;
 
-    // sweeper
-    public CRServo sweepL = null;
-    public CRServo sweepR = null;
+    // Servo arm
+    public Servo sensor_arm = null;
+    public ColorSensor color_sensor = null;
 
 
+
+
+// clamping system
     public DcMotor drawer = null;
     public DcMotor clampR = null;
     public DcMotor clampL = null;
@@ -47,6 +52,11 @@ public class Hardware
         // save reference to HW Map
         hardwareMap = ahwMap;
 
+
+        //sensor
+//        color_sensor = hardwareMap.colorSensor.get("color_sensor");
+        // servo
+//        sensor_arm = hardwareMap.servo.get("sensor_arm");
         // Wheels
         motorFrontLeft = hardwareMap.dcMotor.get("wheel_right_front");//ok
         motorFrontRight = hardwareMap.dcMotor.get("wheel_left_front"); //ok
